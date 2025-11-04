@@ -1,28 +1,38 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import Expertise from './components/Expertise';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen bg-slate-950 font-inter text-slate-100">
+      {/* Simple sticky header */}
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
+          <a href="#top" className="text-sm font-semibold tracking-wide">
+            <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">TRADING PORTFOLIO</span>
+          </a>
+          <nav className="hidden gap-6 text-sm md:flex">
+            <a href="#expertise" className="text-slate-300 hover:text-white">Expertise</a>
+            <a href="#projects" className="text-slate-300 hover:text-white">Projects</a>
+            <a href="#contact" className="text-slate-300 hover:text-white">Contact</a>
+          </nav>
         </div>
-      </div>
+      </header>
+
+      <main id="top" className="pt-14">
+        <Hero />
+        <Expertise />
+        <Projects />
+        <Contact />
+      </main>
+
+      <footer className="border-t border-white/10 bg-slate-950 py-8 text-center text-xs text-slate-400">
+        © {new Date().getFullYear()} Your Name — Focused on market microstructure & trading strategy.
+      </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
