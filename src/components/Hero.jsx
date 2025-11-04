@@ -13,6 +13,7 @@ const Hero = () => {
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/40 to-slate-950/80" />
 
       <div className="relative mx-auto flex h-full max-w-7xl flex-col items-start justify-center px-6 text-white">
+        <p className="mb-3 text-sm text-slate-200/90">Hi, I'm <span className="font-semibold text-white">Arthur</span>.</p>
         <p className="mb-4 inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
           Fintech • Trading Strategy • Market Microstructure
         </p>
